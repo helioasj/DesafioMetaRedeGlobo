@@ -1,6 +1,7 @@
 # DesafioMetaRedeGlobo
 Desafio teste para selecao da Consultoria Meta
 Obs = Infelizmente eu nao tive tempo suficiente para apos o desenvolvimento realizar um refactory no codigo. Existem muitos itens que poderiam e deveriam ser separados em modulos diferentes, melhorando a legibilidade do codigo e tambem tornando-o mais facil de escala-lo e dar manutencao.
+Permaneco a disposicao para esclarecimentos.
 
 Este Desafio esta dividido em 3 partes:
   -Desafio Logica de Programacao
