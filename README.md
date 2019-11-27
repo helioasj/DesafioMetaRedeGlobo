@@ -14,7 +14,7 @@ Questao 02 = Arquivo questao02.py
 Questao 03 = Arquivo questao03.py
 Questao 04 = Arquivo questao04.py
 
-#2) Desafio Integracao
+# 2) Desafio Integracao
 
 Na pasta 'ACME SOLUCAO', existem os arquivos referente ao teste de Integracao.
 
