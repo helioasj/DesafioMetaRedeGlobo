@@ -6,7 +6,7 @@ Este Desafio esta dividido em 3 partes:
   -Desafio Integracao
   -Desafio Web API
 
-#1) Desafio Logica de Programacao
+# 1) Desafio Logica de Programacao
 
 Na pasta 'Desafio de Logica', existem os seguintes arquivos para cada questao proposta, sendo:
 Questao 01 = Arquivo questao01.py
