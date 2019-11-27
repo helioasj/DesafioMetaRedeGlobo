@@ -6,7 +6,7 @@ Este Desafio esta dividido em 3 partes:
   -Desafio Integracao
   -Desafio Web API
 
-1) Desafio Logica de Programacao
+#1) Desafio Logica de Programacao
 
 Na pasta 'Desafio de Logica', existem os seguintes arquivos para cada questao proposta, sendo:
 Questao 01 = Arquivo questao01.py
@@ -14,7 +14,7 @@ Questao 02 = Arquivo questao02.py
 Questao 03 = Arquivo questao03.py
 Questao 04 = Arquivo questao04.py
 
-2) Desafio Integracao
+#2) Desafio Integracao
 
 Na pasta 'ACME SOLUCAO', existem os arquivos referente ao teste de Integracao.
 
@@ -72,26 +72,23 @@ Pastas:
     - As informacoes serao gravadas no banco de dados acme.db3(sqlite3), localizado no diretorio 'Integracao/database'.
     - O nome da tabela do banco de dados que guardara essas informacoes chama-se 'leituratxt'.
     - Nesta tabela tambem ja sao gravados os dados do ID do Job de corte, Mensagem de retorno do POST. 
-    --------------
     - Para acompanhar a gravacao na tabela, entre no banco de dados atraves dos comandos:
       - Posicione no diretorio 'Integracao/database'
       - Execute:    
                   sqlite3;
                   .open acme.db3
                   select * from leituratxt;
-    ---------------
+ 
   2) No momento da leitura, para todos os videos que tiveram mais de 30 minutos de duracao, sera enviado um POST para a API DE CORTE(CORTE-API). 
     - Os dados desta API sao gravados no banco de dados db.sqlite3(sqlite3), localizado no diretorio '../CORTE-API/corte_api'
     - O nome da tabela do banco de dados que guardara essas informacoes chama-se 'corteapp_videos'
     - Cada POST realizado, o corte do video ja fica com status(em relacao ao processo de corte) 'PENDENTE'.
-    --------------
     - Para acompanhar a gravacao na tabela, entre no banco de dados atraves dos comandos:
       - Posicione no diretorio 'CORTE-API/corte_api'
       - Execute:    
                   sqlite3;
                   .open db.sqlite3
                   select * from corteapp_videos;
-    --------------
     
   3) A cada 1 minuto, o processo de GET e realizado, obtendo o status do processo de corte e guardando esta informacao na coluna 'status_corte' da tabela 'leituratxt'.
   
@@ -99,4 +96,24 @@ Pastas:
     - Apos a executao deste processo, o status do processo, pendente na tabela corteapp_videos e atualizado.
    
 
+  #3) Desafio Web API
+
+Na pasta 'Desafio Web Api', existem os arquivos referente ao teste de Web API.
+
+Pasta:
+  -webapi
   
+  1) Subindo a WEB API
+  Posicionar-se no diretorio ../Desafio Web Api/webapi
+  Executar o comando: python3 manage.py runserver 127.0.0.1:8002 (IMPORTANTE DEVIDO A PORTA JA UTILIZADA)
+ 
+  2) Para esta API foram testados os seguintes ENDPOINTS
+  
+  MODEL = Contato
+    
+  GET/{idContato} - Retorna um unico objeto do tipo Contato
+  PUT/{idContato} - Altera um objeto do tipo Contato
+  DELETE/{idContato} - Apaga um objeto do tipo Contato
+  
+  GET/ - Retorna todos os objetos
+  POST/ - Cria um novo objeto do tipo Contato
