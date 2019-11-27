@@ -72,11 +72,26 @@ Pastas:
     - As informacoes serao gravadas no banco de dados acme.db3(sqlite3), localizado no diretorio 'Integracao/database'.
     - O nome da tabela do banco de dados que guardara essas informacoes chama-se 'leituratxt'.
     - Nesta tabela tambem ja sao gravados os dados do ID do Job de corte, Mensagem de retorno do POST. 
-    
+    --------------
+    - Para acompanhar a gravacao na tabela, entre no banco de dados atraves dos comandos:
+      - Posicione no diretorio 'Integracao/database'
+      - Execute:    
+                  sqlite3;
+                  .open acme.db3
+                  select * from leituratxt;
+    ---------------
   2) No momento da leitura, para todos os videos que tiveram mais de 30 minutos de duracao, sera enviado um POST para a API DE CORTE(CORTE-API). 
     - Os dados desta API sao gravados no banco de dados db.sqlite3(sqlite3), localizado no diretorio '../CORTE-API/corte_api'
     - O nome da tabela do banco de dados que guardara essas informacoes chama-se 'corteapp_videos'
     - Cada POST realizado, o corte do video ja fica com status(em relacao ao processo de corte) 'PENDENTE'.
+    --------------
+    - Para acompanhar a gravacao na tabela, entre no banco de dados atraves dos comandos:
+      - Posicione no diretorio 'CORTE-API/corte_api'
+      - Execute:    
+                  sqlite3;
+                  .open db.sqlite3
+                  select * from corteapp_videos;
+    --------------
     
   3) A cada 1 minuto, o processo de GET e realizado, obtendo o status do processo de corte e guardando esta informacao na coluna 'status_corte' da tabela 'leituratxt'.
   
