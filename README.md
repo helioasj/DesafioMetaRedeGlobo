@@ -112,6 +112,12 @@ Pasta:
   2) Para esta API foram testados os seguintes ENDPOINTS
   
   MODEL = Contato
+  {
+  "nome": "string",
+  "canal": "string",
+  "valor": "string",
+  "obs": "string"
+  }
     
   GET/{idContato} - Retorna um unico objeto do tipo Contato
   PUT/{idContato} - Altera um objeto do tipo Contato
